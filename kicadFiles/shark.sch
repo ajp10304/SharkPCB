@@ -15,54 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:C_Small C1
-U 1 1 5BEDBE98
-P 19950 7275
-F 0 "C1" H 20042 7321 50  0000 L CNN
-F 1 "22p" H 20042 7230 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 19950 7275 50  0001 C CNN
-F 3 "~" H 19950 7275 50  0001 C CNN
-	1    19950 7275
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C2
-U 1 1 5BEDBF42
-P 20650 7275
-F 0 "C2" H 20742 7321 50  0000 L CNN
-F 1 "22p" H 20742 7230 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 20650 7275 50  0001 C CNN
-F 3 "~" H 20650 7275 50  0001 C CNN
-	1    20650 7275
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	19950 7425 19950 7375
-Wire Wire Line
-	20650 7425 20650 7375
-Wire Wire Line
-	20650 7175 20650 7075
-Wire Wire Line
-	19950 7175 19950 7075
-Connection ~ 19950 7075
-Connection ~ 20650 7075
-$Comp
-L power:GND #PWR021
-U 1 1 5BEDC68E
-P 20300 7425
-F 0 "#PWR021" H 20300 7175 50  0001 C CNN
-F 1 "GND" V 20305 7297 50  0000 R CNN
-F 2 "" H 20300 7425 50  0001 C CNN
-F 3 "" H 20300 7425 50  0001 C CNN
-	1    20300 7425
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	19950 7425 20300 7425
-Connection ~ 20300 7425
-Wire Wire Line
-	20300 7425 20650 7425
-$Comp
 L power:GND #PWR014
 U 1 1 5BEE3841
 P 8625 12275
@@ -1750,10 +1702,6 @@ Wire Wire Line
 	2975 3975 2975 5000
 Connection ~ 2975 3975
 Wire Wire Line
-	19950 7075 20150 7075
-Wire Wire Line
-	20450 7075 20650 7075
-Wire Wire Line
 	6475 6350 7475 6350
 Wire Wire Line
 	6475 6675 6775 6675
@@ -1969,14 +1917,6 @@ Wire Wire Line
 Connection ~ 12975 6025
 Wire Wire Line
 	12975 6025 12975 7050
-Text GLabel 20650 7025 1    50   Input ~ 0
-XTAL1
-Wire Wire Line
-	20650 7025 20650 7075
-Text GLabel 19950 7025 1    50   Input ~ 0
-XTAL2
-Wire Wire Line
-	19950 7025 19950 7075
 Text GLabel 1625 3275 0    50   Input ~ 0
 Row1
 Text GLabel 1625 4300 0    50   Input ~ 0
@@ -3521,14 +3461,14 @@ Wire Wire Line
 	9300 10375 9225 10375
 Text GLabel 17250 9850 2    50   Output ~ 0
 3.3V
-Text GLabel 19125 4150 0    50   BiDi ~ 0
+Text GLabel 19975 2975 1    50   BiDi ~ 0
 D+
-Text GLabel 19125 4050 0    50   BiDi ~ 0
+Text GLabel 20075 2975 1    50   BiDi ~ 0
 D-
 Wire Wire Line
-	19125 4150 19175 4150
+	19975 2975 19975 3025
 Wire Wire Line
-	19125 4050 19175 4050
+	20075 2975 20075 3025
 $Comp
 L Regulator_Linear:MCP1700-3302E_SOT23 U2
 U 1 1 5D83639E
@@ -3562,61 +3502,6 @@ F 3 "" H 16600 10525 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	16600 10525 16600 10450
-Wire Wire Line
-	19175 5850 19100 5850
-Wire Wire Line
-	19100 5850 19100 5950
-Wire Wire Line
-	19100 6150 19175 6150
-Wire Wire Line
-	19175 6050 19100 6050
-Connection ~ 19100 6050
-Wire Wire Line
-	19100 6050 19100 6150
-Wire Wire Line
-	19175 5950 19100 5950
-Connection ~ 19100 5950
-Wire Wire Line
-	19100 5950 19100 6050
-Wire Wire Line
-	19100 6150 19100 6300
-Connection ~ 19100 6150
-$Comp
-L power:GND #PWR019
-U 1 1 5DEE874F
-P 19100 6300
-F 0 "#PWR019" H 19100 6050 50  0001 C CNN
-F 1 "GND" H 19105 6127 50  0000 C CNN
-F 2 "" H 19100 6300 50  0001 C CNN
-F 3 "" H 19100 6300 50  0001 C CNN
-	1    19100 6300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	19175 3700 19125 3700
-Wire Wire Line
-	19125 3700 19125 3550
-Wire Wire Line
-	19125 3100 19175 3100
-Wire Wire Line
-	19175 3250 19125 3250
-Connection ~ 19125 3250
-Wire Wire Line
-	19125 3250 19125 3100
-Wire Wire Line
-	19175 3400 19125 3400
-Connection ~ 19125 3400
-Wire Wire Line
-	19125 3400 19125 3250
-Wire Wire Line
-	19175 3550 19125 3550
-Connection ~ 19125 3550
-Wire Wire Line
-	19125 3550 19125 3400
-Wire Wire Line
-	19000 3400 19125 3400
-Text GLabel 19000 3400 0    50   Input ~ 0
-3.3V
 $Comp
 L Switch:SW_Push SWRST1
 U 1 1 5E070BED
@@ -3804,157 +3689,16 @@ Connection ~ 9300 10175
 Wire Wire Line
 	9300 9875 9450 9875
 Connection ~ 9300 10375
-$Comp
-L Device:C_Small CVBus1
-U 1 1 5ED231C7
-P 19400 10200
-F 0 "CVBus1" H 19492 10231 31  0000 L CNN
-F 1 "100n" H 19492 10169 31  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 19400 10200 50  0001 C CNN
-F 3 "~" H 19400 10200 50  0001 C CNN
-	1    19400 10200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small CVBus2
-U 1 1 5ED24D83
-P 19750 10200
-F 0 "CVBus2" H 19842 10231 31  0000 L CNN
-F 1 "100n" H 19842 10169 31  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 19750 10200 50  0001 C CNN
-F 3 "~" H 19750 10200 50  0001 C CNN
-	1    19750 10200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small CVBus3
-U 1 1 5ED24FA7
-P 20100 10200
-F 0 "CVBus3" H 20192 10231 31  0000 L CNN
-F 1 "100n" H 20192 10169 31  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 20100 10200 50  0001 C CNN
-F 3 "~" H 20100 10200 50  0001 C CNN
-	1    20100 10200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small CVBus4
-U 1 1 5ED251CF
-P 20450 10200
-F 0 "CVBus4" H 20542 10231 31  0000 L CNN
-F 1 "1u" H 20542 10169 31  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 20450 10200 50  0001 C CNN
-F 3 "~" H 20450 10200 50  0001 C CNN
-	1    20450 10200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small CVBus5
-U 1 1 5ED253F3
-P 20800 10200
-F 0 "CVBus5" H 20892 10231 31  0000 L CNN
-F 1 "4.7u" H 20892 10169 31  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 20800 10200 50  0001 C CNN
-F 3 "~" H 20800 10200 50  0001 C CNN
-	1    20800 10200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	19400 10300 19400 10375
-Wire Wire Line
-	19400 10375 19750 10375
-Wire Wire Line
-	20800 10375 20800 10300
-Wire Wire Line
-	20800 10100 20800 10025
-Wire Wire Line
-	20800 10025 20450 10025
-Wire Wire Line
-	19400 10025 19400 10100
-Wire Wire Line
-	19750 10025 19750 10100
-Wire Wire Line
-	19750 10300 19750 10375
-Connection ~ 19750 10025
-Wire Wire Line
-	19750 10025 19400 10025
-Connection ~ 19750 10375
-Wire Wire Line
-	19750 10375 20100 10375
-Wire Wire Line
-	20100 10025 20100 10100
-Wire Wire Line
-	20100 10300 20100 10375
-Connection ~ 20100 10025
-Wire Wire Line
-	20100 10025 19750 10025
-Connection ~ 20100 10375
-Wire Wire Line
-	20100 10375 20450 10375
-Wire Wire Line
-	20450 10025 20450 10100
-Wire Wire Line
-	20450 10300 20450 10375
-Connection ~ 20450 10025
-Wire Wire Line
-	20450 10025 20100 10025
-Connection ~ 20450 10375
-Wire Wire Line
-	20450 10375 20800 10375
-Text GLabel 20100 9950 1    50   BiDi ~ 0
-3.3V
-$Comp
-L power:GND #PWR017
-U 1 1 5EED5F47
-P 20100 10425
-F 0 "#PWR017" H 20100 10175 50  0001 C CNN
-F 1 "GND" V 20105 10297 50  0000 R CNN
-F 2 "" H 20100 10425 50  0001 C CNN
-F 3 "" H 20100 10425 50  0001 C CNN
-	1    20100 10425
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	20100 10425 20100 10375
-Wire Wire Line
-	20100 10025 20100 9950
-Wire Wire Line
-	20300 7275 20300 7425
-$Comp
-L power:GND #PWR020
-U 1 1 5F0F4262
-P 20300 6775
-F 0 "#PWR020" H 20300 6525 50  0001 C CNN
-F 1 "GND" V 20305 6647 50  0000 R CNN
-F 2 "" H 20300 6775 50  0001 C CNN
-F 3 "" H 20300 6775 50  0001 C CNN
-	1    20300 6775
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	20300 6775 20300 6875
-Text GLabel 19125 5100 0    50   Input ~ 0
-XTAL1
-Text GLabel 19125 5200 0    50   Input ~ 0
-XTAL2
-Wire Wire Line
-	19125 5100 19175 5100
-Wire Wire Line
-	19125 5200 19175 5200
 Wire Wire Line
 	16200 7675 16650 7675
 Text GLabel 16950 7675 2    50   BiDi ~ 0
 NRST
 Text GLabel 16950 8050 2    50   BiDi ~ 0
 BOOT0
-Text GLabel 19125 5450 0    50   Input ~ 0
-NRST
-Text GLabel 19125 5600 0    50   Input ~ 0
+Text GLabel 21425 4625 2    50   Input ~ 0
 BOOT0
 Wire Wire Line
-	19125 5450 19175 5450
-Wire Wire Line
-	19125 5600 19175 5600
+	21425 4625 21375 4625
 Wire Notes Line width 20
 	17425 7125 17425 8650
 Wire Notes Line width 20
@@ -3988,19 +3732,6 @@ Text GLabel 2700 10100 1    50   Input ~ 0
 5V
 Wire Wire Line
 	2700 10100 2700 10200
-$Comp
-L Device:Crystal_GND24 Y1
-U 1 1 5FDEF82F
-P 20300 7075
-F 0 "Y1" H 20375 7350 50  0000 L CNN
-F 1 "8MHz" H 20350 7275 50  0000 L CNN
-F 2 "acheronComponents:Crystal_SMD_5032-4Pin_5.0x3.2mm" H 20300 7075 50  0001 C CNN
-F 3 "~" H 20300 7075 50  0001 C CNN
-	1    20300 7075
-	1    0    0    -1  
-$EndComp
-Text Notes 20200 9875 0    100  Italic 20
-Voltage regulation\ncapacitor bank\n
 Wire Wire Line
 	16750 9375 16950 9375
 Wire Wire Line
@@ -4180,10 +3911,10 @@ Wire Wire Line
 Connection ~ 12200 13500
 Wire Wire Line
 	12200 13500 12850 13500
-Text GLabel 21450 3500 2    50   Output ~ 0
+Text GLabel 19250 4775 0    50   Output ~ 0
 LED_PWM
 Wire Wire Line
-	21450 3500 21375 3500
+	19250 4775 19325 4775
 Text GLabel 11550 11800 1    50   Input ~ 0
 5V
 Wire Wire Line
@@ -4218,7 +3949,7 @@ Text GLabel 11550 12750 1    50   Input ~ 0
 5V
 Wire Wire Line
 	11550 12750 11550 12800
-Text GLabel 21475 5300 2    50   Output ~ 0
+Text GLabel 19225 5525 0    50   Output ~ 0
 RGB_PWM
 Text GLabel 11200 12225 0    50   Input ~ 0
 RGB_PWM
@@ -4251,34 +3982,34 @@ Wire Notes Line
 	7975 12250 7975 13225
 Text GLabel 15525 8050 0    50   Input ~ 0
 3.3V
-Text GLabel 21450 6150 2    50   Input ~ 0
+Text GLabel 22150 5425 2    50   Input ~ 0
 Col1
 Wire Wire Line
-	21450 6150 21375 6150
-Text GLabel 21450 3600 2    50   Input ~ 0
+	22150 5425 22075 5425
+Text GLabel 21450 5225 2    50   Input ~ 0
 Row3
-Text GLabel 21450 4750 2    50   Input ~ 0
+Text GLabel 19250 4025 0    50   Input ~ 0
 Row2
 Wire Wire Line
-	21450 4750 21375 4750
-Text GLabel 21450 4950 2    50   Input ~ 0
+	19250 4025 19325 4025
+Text GLabel 19250 4225 0    50   Input ~ 0
 Row4
 Wire Wire Line
-	21450 4950 21375 4950
+	19250 4225 19325 4225
 Wire Wire Line
-	21450 3600 21375 3600
-Text GLabel 21450 5500 2    50   Input ~ 0
+	21450 5225 21375 5225
+Text GLabel 19250 5325 0    50   Input ~ 0
 Col7
 Wire Wire Line
-	21450 5500 21375 5500
-Text GLabel 21450 3400 2    50   Input ~ 0
+	19250 5325 19325 5325
+Text GLabel 21450 5425 2    50   Input ~ 0
 Col11
 Wire Wire Line
-	21450 3400 21375 3400
-Text GLabel 21450 6000 2    50   Input ~ 0
+	21450 5425 21375 5425
+Text GLabel 21450 3925 2    50   Input ~ 0
 Col10
 Wire Wire Line
-	21450 6000 21375 6000
+	21450 3925 21375 3925
 $Comp
 L Mechanical:MountingHole L2
 U 1 1 5C525928
@@ -4290,42 +4021,42 @@ F 3 "~" H 17025 3425 50  0001 C CNN
 	1    17025 3425
 	1    0    0    -1  
 $EndComp
-Text GLabel 19100 4450 0    50   Input ~ 0
+Text GLabel 21450 5625 2    50   Input ~ 0
 Col12
-Text GLabel 19125 4800 0    50   Input ~ 0
+Text GLabel 21425 4925 2    50   Input ~ 0
 Col2
 Wire Wire Line
-	19125 4800 19175 4800
-Text GLabel 19125 4900 0    50   Input ~ 0
+	21425 4925 21375 4925
+Text GLabel 21425 4825 2    50   Input ~ 0
 Col3
 Wire Wire Line
-	19125 4900 19175 4900
-Text GLabel 21450 5900 2    50   Input ~ 0
+	21425 4825 21375 4825
+Text GLabel 21450 3825 2    50   Input ~ 0
 Col4
 Wire Wire Line
-	21450 5900 21375 5900
-Text GLabel 21450 5800 2    50   Input ~ 0
+	21450 3825 21375 3825
+Text GLabel 21450 3725 2    50   Input ~ 0
 Col5
 Wire Wire Line
-	21450 5800 21375 5800
-Text GLabel 21450 5700 2    50   Input ~ 0
+	21450 3725 21375 3725
+Text GLabel 21450 4725 2    50   Input ~ 0
 Col6
 Wire Wire Line
-	21450 5700 21375 5700
-Text GLabel 21450 5600 2    50   Input ~ 0
+	21450 4725 21375 4725
+Text GLabel 19250 5225 0    50   Input ~ 0
 Col8
 Wire Wire Line
-	21450 5600 21375 5600
-Text GLabel 21450 5400 2    50   Input ~ 0
+	19250 5225 19325 5225
+Text GLabel 19250 5425 0    50   Input ~ 0
 Col9
 Wire Wire Line
-	21450 5400 21375 5400
-Text GLabel 21450 4000 2    50   Input ~ 0
+	19250 5425 19325 5425
+Text GLabel 19250 5725 0    50   Input ~ 0
 Row1
 Wire Wire Line
-	21450 4000 21375 4000
+	19250 5725 19325 5725
 Wire Wire Line
-	21475 5300 21375 5300
+	19225 5525 19325 5525
 $Comp
 L Mechanical:MountingHole L3
 U 1 1 5C66B5D5
@@ -4546,25 +4277,14 @@ Wire Wire Line
 	16325 6550 16400 6550
 Wire Wire Line
 	16325 6350 16400 6350
-Text GLabel 21450 4850 2    50   Input ~ 0
+Text GLabel 19250 4125 0    50   Input ~ 0
 EncA
-Text GLabel 21450 4650 2    50   Input ~ 0
+Text GLabel 19250 3925 0    50   Input ~ 0
 EncB
 Wire Wire Line
-	21450 4650 21375 4650
+	19250 3925 19325 3925
 Wire Wire Line
-	21375 4850 21450 4850
-$Comp
-L acheronSymbols:STM32F303CCT6 U1
-U 1 1 5DA11389
-P 20325 4350
-F 0 "U1" H 20275 5847 60  0000 C CNN
-F 1 "STM32F303CCT6" H 20275 5741 60  0000 C CNN
-F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 20325 4350 60  0001 C CNN
-F 3 "" H 20325 4350 60  0001 C CNN
-	1    20325 4350
-	1    0    0    -1  
-$EndComp
+	19325 4125 19250 4125
 Wire Wire Line
 	2875 10700 3150 10700
 Wire Wire Line
@@ -4810,14 +4530,6 @@ Wire Notes Line width 20
 Wire Notes Line width 20
 	15150 9050 18000 9050
 Wire Notes Line width 20
-	19175 9500 19175 10775
-Wire Notes Line width 20
-	19175 9500 21675 9500
-Wire Notes Line width 20
-	21675 9500 21675 10775
-Wire Notes Line width 20
-	21675 10775 19175 10775
-Wire Notes Line width 20
 	17850 11725 17850 12975
 Wire Notes Line width 20
 	19150 11725 19150 12975
@@ -4918,32 +4630,32 @@ Wire Notes Line width 20
 	12575 10225 10700 10225
 Text Notes 10875 10150 0    150  Italic 30
 I2C Connector
-Text GLabel 21450 4200 2    50   Input ~ 0
+Text GLabel 19250 3325 0    50   Input ~ 0
 SCL
-Text GLabel 21450 4100 2    50   Input ~ 0
+Text GLabel 19250 3425 0    50   Input ~ 0
 SDA
 Wire Wire Line
-	21450 4200 21375 4200
+	19250 3325 19325 3325
 Wire Wire Line
-	21375 4100 21450 4100
+	19325 3425 19250 3425
 Wire Wire Line
-	19100 4450 19175 4450
-Text GLabel 21450 4300 2    50   Input ~ 0
+	21450 5625 21375 5625
+Text GLabel 19250 5625 0    50   Input ~ 0
 Extra1
-Text GLabel 21450 3100 2    50   Input ~ 0
+Text GLabel 21450 4325 2    50   Input ~ 0
 Extra2
-Text GLabel 21450 3200 2    50   Input ~ 0
+Text GLabel 21450 4225 2    50   Input ~ 0
 Extra3
-Text GLabel 21450 3300 2    50   Input ~ 0
+Text GLabel 21450 4125 2    50   Input ~ 0
 Extra4
 Wire Wire Line
-	21375 3300 21450 3300
+	21375 4125 21450 4125
 Wire Wire Line
-	21450 3200 21375 3200
+	21450 4225 21375 4225
 Wire Wire Line
-	21375 3100 21450 3100
+	21375 4325 21450 4325
 Wire Wire Line
-	21450 4300 21375 4300
+	19250 5625 19325 5625
 Wire Notes Line width 20
 	12575 10225 12575 9150
 Wire Notes Line width 20
@@ -4985,22 +4697,22 @@ Wire Notes Line width 20
 	10700 11350 10700 10275
 Text GLabel 11425 10950 2    50   Input ~ 0
 Extra4
-Text GLabel 21450 3750 2    50   Input ~ 0
+Text GLabel 21450 4425 2    50   Input ~ 0
 Extra5
-Text GLabel 21450 3850 2    50   Input ~ 0
+Text GLabel 21450 4025 2    50   Input ~ 0
 Extra6
-Text GLabel 21450 4450 2    50   Input ~ 0
+Text GLabel 19250 3725 0    50   Input ~ 0
 Extra7
-Text GLabel 21450 4550 2    50   Input ~ 0
+Text GLabel 19250 3825 0    50   Input ~ 0
 Extra8
 Wire Wire Line
-	21450 4550 21375 4550
+	19250 3825 19325 3825
 Wire Wire Line
-	21375 4450 21450 4450
+	19325 3725 19250 3725
 Wire Wire Line
-	21450 3750 21375 3750
+	21450 4425 21375 4425
 Wire Wire Line
-	21375 3850 21450 3850
+	21375 4025 21450 4025
 $Comp
 L Connector:Conn_01x04_Male J4
 U 1 1 5D3B4464
@@ -5038,4 +4750,148 @@ Wire Notes Line width 20
 	12675 11350 12675 10275
 Text GLabel 13400 10950 2    50   Input ~ 0
 Extra8
+NoConn ~ 26150 7525
+$Comp
+L proton_c:proton_c U?
+U 1 1 5C9EC37F
+P 20375 4325
+F 0 "U?" H 20350 2803 50  0000 C CNN
+F 1 "proton_c" H 20350 2712 50  0000 C CNN
+F 2 "" H 20225 4325 50  0001 C CNN
+F 3 "" H 20225 4325 50  0001 C CNN
+	1    20375 4325
+	1    0    0    -1  
+$EndComp
+Text GLabel 20175 2975 1    50   Input ~ 0
+5V
+Text GLabel 20525 2975 1    50   Input ~ 0
+5V
+Wire Wire Line
+	20525 2975 20525 3025
+Wire Wire Line
+	20175 2975 20175 3025
+Wire Notes Line width 20
+	21675 10775 19175 10775
+Wire Notes Line width 20
+	21675 9500 21675 10775
+Wire Notes Line width 20
+	19175 9500 21675 9500
+Wire Notes Line width 20
+	19175 9500 19175 10775
+Text Notes 20200 9875 0    100  Italic 20
+Voltage regulation\ncapacitor bank\n
+Wire Wire Line
+	20100 10025 20100 9950
+Wire Wire Line
+	20100 10425 20100 10375
+$Comp
+L power:GND #PWR017
+U 1 1 5EED5F47
+P 20100 10425
+F 0 "#PWR017" H 20100 10175 50  0001 C CNN
+F 1 "GND" V 20105 10297 50  0000 R CNN
+F 2 "" H 20100 10425 50  0001 C CNN
+F 3 "" H 20100 10425 50  0001 C CNN
+	1    20100 10425
+	1    0    0    -1  
+$EndComp
+Text GLabel 20100 9950 1    50   BiDi ~ 0
+3.3V
+Wire Wire Line
+	20450 10375 20800 10375
+Wire Wire Line
+	20450 10300 20450 10375
+Wire Wire Line
+	20450 10025 20450 10100
+Connection ~ 20450 10375
+Wire Wire Line
+	20100 10375 20450 10375
+Wire Wire Line
+	20450 10025 20100 10025
+Connection ~ 20100 10025
+Connection ~ 20100 10375
+Wire Wire Line
+	20100 10300 20100 10375
+Wire Wire Line
+	20100 10025 20100 10100
+Wire Wire Line
+	19750 10375 20100 10375
+Wire Wire Line
+	19750 10300 19750 10375
+Wire Wire Line
+	20100 10025 19750 10025
+Wire Wire Line
+	19750 10025 19400 10025
+Connection ~ 19750 10025
+Wire Wire Line
+	19750 10025 19750 10100
+Wire Wire Line
+	19400 10025 19400 10100
+Connection ~ 20450 10025
+Wire Wire Line
+	20800 10025 20450 10025
+Wire Wire Line
+	20800 10100 20800 10025
+Wire Wire Line
+	20800 10375 20800 10300
+Connection ~ 19750 10375
+Wire Wire Line
+	19400 10375 19750 10375
+Wire Wire Line
+	19400 10300 19400 10375
+$Comp
+L Device:C_Small CVBus5
+U 1 1 5ED253F3
+P 20800 10200
+F 0 "CVBus5" H 20892 10231 31  0000 L CNN
+F 1 "4.7u" H 20892 10169 31  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 20800 10200 50  0001 C CNN
+F 3 "~" H 20800 10200 50  0001 C CNN
+	1    20800 10200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small CVBus4
+U 1 1 5ED251CF
+P 20450 10200
+F 0 "CVBus4" H 20542 10231 31  0000 L CNN
+F 1 "1u" H 20542 10169 31  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 20450 10200 50  0001 C CNN
+F 3 "~" H 20450 10200 50  0001 C CNN
+	1    20450 10200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small CVBus3
+U 1 1 5ED24FA7
+P 20100 10200
+F 0 "CVBus3" H 20192 10231 31  0000 L CNN
+F 1 "100n" H 20192 10169 31  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 20100 10200 50  0001 C CNN
+F 3 "~" H 20100 10200 50  0001 C CNN
+	1    20100 10200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small CVBus2
+U 1 1 5ED24D83
+P 19750 10200
+F 0 "CVBus2" H 19842 10231 31  0000 L CNN
+F 1 "100n" H 19842 10169 31  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 19750 10200 50  0001 C CNN
+F 3 "~" H 19750 10200 50  0001 C CNN
+	1    19750 10200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small CVBus1
+U 1 1 5ED231C7
+P 19400 10200
+F 0 "CVBus1" H 19492 10231 31  0000 L CNN
+F 1 "100n" H 19492 10169 31  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 19400 10200 50  0001 C CNN
+F 3 "~" H 19400 10200 50  0001 C CNN
+	1    19400 10200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
